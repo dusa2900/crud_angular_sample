@@ -57,7 +57,8 @@ showAddEmployee()
   this.showAdd=true;
   this.showUpdate=false;
   this.showBack=true;
-  this.userList.reset();  
+  this.userList.reset(); 
+   
   
 }
 showUserList()
@@ -79,10 +80,11 @@ postUser()
      
       console.log(res);
       alert(`Do you want to Post user?`);
+      
       this.showForm=true;
-      this.getUserList();
       this.userList.reset();
       
+      this.getUserList();
       
       
     })
@@ -131,4 +133,5 @@ viewUser(x:any)
   this.userform.controls['salary'].setValue(x.salary);
 
 }
+
 }

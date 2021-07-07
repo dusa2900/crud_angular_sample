@@ -9,14 +9,6 @@
       "id": 8
     },
     {
-      "firstName": "adsa",
-      "lastName": "sadasdas",
-      "email": "sadsadasd",
-      "mobile": 2432343,
-      "salary": "332",
-      "id": 13
-    },
-    {
       "id": 14,
       "firstName": "dusa",
       "lastName": "goutham",
@@ -31,6 +23,30 @@
       "email": "revanth@gmail.com",
       "mobile": 9887236884,
       "salary": "45000"
+    },
+    {
+      "id": 16,
+      "firstName": "chiranjeevi",
+      "lastName": "konidela",
+      "email": "chiru.konidela@gmail.com",
+      "mobile": 9867237233,
+      "salary": "35000"
+    },
+    {
+      "id": 17,
+      "firstName": "dusa@gmail.com",
+      "lastName": "dusa@gmail.com",
+      "email": "dusa@gmail.com",
+      "mobile": 8986923,
+      "salary": "414241"
+    },
+    {
+      "id": 18,
+      "firstName": "dusa@gmail.com",
+      "lastName": "dusa@gmail.com",
+      "email": "dusa@gmail.com",
+      "mobile": 8986923,
+      "salary": "2qe"
     }
   ]
 }
