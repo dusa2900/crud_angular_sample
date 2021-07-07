@@ -1,0 +1,36 @@
+{
+  "posts": [
+    {
+      "firstName": "dusa",
+      "lastName": "goutham",
+      "email": "dusa@gmail.com",
+      "mobile": 8374202900,
+      "salary": "85000",
+      "id": 8
+    },
+    {
+      "firstName": "adsa",
+      "lastName": "sadasdas",
+      "email": "sadsadasd",
+      "mobile": 2432343,
+      "salary": "332",
+      "id": 13
+    },
+    {
+      "id": 14,
+      "firstName": "dusa",
+      "lastName": "goutham",
+      "email": "goutham.dusa@techwave.net",
+      "mobile": 8374202900,
+      "salary": "85000"
+    },
+    {
+      "id": 15,
+      "firstName": "revanth",
+      "lastName": "korrri",
+      "email": "revanth@gmail.com",
+      "mobile": 9887236884,
+      "salary": "45000"
+    }
+  ]
+}

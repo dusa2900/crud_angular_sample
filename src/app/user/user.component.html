@@ -1,0 +1,101 @@
+<nav class="navbar navbar-light bg-primary">
+    <div class="container-fluid">
+        <h1 style="color: white;">Angular Crud</h1>
+        <div class="d-flex">
+            <button (click)="showAddEmployee()" class="btn btn-success" >AddEmploye</button>
+        </div>
+    </div>
+</nav>
+
+<table class="table mt-3" *ngIf="showForm">
+    <thead>
+        <tr>
+            
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Email Id</th>
+            <th scope="col">MobileNo</th>
+            <th scope="col">salary</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let x of userList" style="color: red;">
+            <td>{{x.firstName}}</td>
+            <td>{{x.lastName}}</td>
+            <td>{{x.email}}</td>
+            <td>{{x.mobile}}</td>
+            <td>{{x.salary}}</td>
+            <td><button (click)="viewUser(x)" class="btn btn-success">View</button>&nbsp;
+                <button (click)="editUser(x)" class="btn btn-info">Edit</button>
+                <button (click)="deleteUserById(x.id)" class="btn btn-danger mx-3">Delete</button></td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+<div class="form" *ngIf="!showForm" >
+<div class="form-header">
+    <h2>UserForm:</h2>
+</div>
+  <div class="form-body">
+    <form [formGroup]="userform">
+        <div class="mb-2">
+          <label for="exampleInputEmail1" class="form-label">Firstname</label>
+          <input type="text" formControlName="firstName" class="form-control w-50" id="exampleInputEmail1" aria-describedby="emailHelp">
+          
+        </div>
+        <div class="mb-2">
+          <label for="exampleInputPassword1" class="form-label">Last Name</label>
+          <input type="text"  formControlName="lastName" class="form-control w-50" id="exampleInputPassword1">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Email</label>
+            <input type="email"  formControlName="email" class="form-control w-50" id="exampleInputPassword1">
+          </div>
+        <div class="mb-2">
+            <label for="exampleInputPassword1" class="form-label">Phone Number</label>
+            <input type="number"  formControlName="mobile" class="form-control w-50" id="exampleInputPassword1">
+          </div>
+          <div class="mb-2">
+            <label for="exampleInputPassword1" class="form-label">Salary</label>
+            <input type="text"  formControlName="salary" class="form-control w-50" id="exampleInputPassword1">
+          </div>
+        
+      </form>
+  </div>
+  <div class="form-footer">
+    <button type="button" (click)="postUser()" *ngIf="showAdd" class="btn btn-primary" >Add</button>
+    <button type="button" (click)="updateUser()" *ngIf="showUpdate"class="btn btn-primary" >update</button>
+    <button type="button"  (click)="showUserList()" *ngIf="showBack"class="btn btn-info m-2" >Back</button>
+  </div>
+</div>
+
+
+<div class="container" *ngIf="showView">
+    <h1 style="color: black;">User data:</h1>
+    <table>
+        <tr>
+            <th style="color: black;">First Name:</th>
+            <th  style="color: green;">{{this.userform.value.firstName}}</th>
+           
+        </tr>
+        <tr>
+            <th style="color: black;">last Name:</th>
+            <th  style="color: green;">{{this.userform.value.lastName}}</th>
+        </tr>
+        <tr>
+            <th style="color: black;">Email:</th>
+            <th  style="color: green;">{{this.userform.value.email}}</th>
+        </tr>
+        <tr>
+            <th style="color: black;">Mobile:</th>
+            <th  style="color: green;">{{this.userform.value.mobile}}</th>
+        </tr>
+        <tr>
+            <th style="color: black;">Salary:</th>
+            <th  style="color: green;">{{this.userform.value.salary}}</th>
+        </tr>
+    </table>
+</div>
